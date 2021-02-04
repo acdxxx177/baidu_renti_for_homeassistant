@@ -5,7 +5,7 @@ import homeassistant.helpers.config_validation as cv
 from datetime import datetime, timedelta
 
 from homeassistant.const import CONF_ENTITY_ID, CONF_SCAN_INTERVAL
-from homeassistant.components.binary_sensor import PLATFORM_SCHEMA, BinarySensorDevice, DEVICE_CLASS_MOTION
+from homeassistant.components.binary_sensor import PLATFORM_SCHEMA, BinarySensorEntity, DEVICE_CLASS_MOTION
 from homeassistant.core import split_entity_id
 from .compare_the_task import compareTask
 from .baiduBodyAnalysis import baiduBody
@@ -93,7 +93,7 @@ async def async_setup_platform(hass,
     hass.services.async_register("baidu_renti", "get_img", get_img)
 
 
-class BaidurentiEntity(CoordinatorEntity, BinarySensorDevice):
+class BaidurentiEntity(CoordinatorEntity, BinarySensorEntity):
     """Representation of the Microsoft Face API entity for identify."""
 
     def __init__(self, coordinator, name, unique_id, index=0):

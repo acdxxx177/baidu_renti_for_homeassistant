@@ -5,7 +5,7 @@ README
 ***
 #### 安装步骤：
 1. 下载[baidu_renti](./config/custom_components)目录放到HOMEASSISTANT的config/custom_components目录下
-1. 申请[百度开发者网站](https://cloud.baidu.com/product/face/search) 的账户并创建应用拿到key，完善以下内容
+1. 申请[百度开发者网站](https://ai.baidu.com/tech/body/numh) 的账户并创建应用拿到key，完善以下内容
 ``` YAML {.line-numbers}
 sensor:
   - platform: baidu_renti
@@ -20,7 +20,7 @@ sensor:
         frame:                  #单个摄像头分区域（没有区域就不填，默认全图识别）
           - name: in            #区域的名称
             area: 478,73,565,127,537,476,508,479,468,281 #区域的范围，
-# 区域范围规则（第一个x坐标，第一个y坐标，第二个x坐标，第二个y坐标........）详见百度开发文档
+# 区域范围规则（第一个x坐标，第一个y坐标，第二个x坐标，第二个y坐标........）需要围城一个封闭空间，详见下方百度开发文档
           - name: out           #第二个区域
             area: 343,93,463,93,453,272,491,467,215,470,315,188
           #后面可以按上面加多个区域
@@ -32,7 +32,7 @@ sensor:
 3. 重启HOMEASSISTANT
 
 #### 界面预览：
-![界面图](/assets/main.png)
+![界面图](/assets/mian.png)
 
 ### 服务调用
 可以调用服务baidu_renti.get_img，给入数据img: true，可开启保存图片，在有人的情况下，会自动保存图片到media/camera_pic/{你的摄像头名称}目录下
@@ -43,5 +43,5 @@ sensor:
 
 参考的地方
 ===
-- https://developers.home-assistant.io/docs/en/entity_binary_sensor.html
-- https://ai.baidu.com/ai-doc/BODY/7k3cpyy1t
+- https://developers.home-assistant.io/
+- 百度开发文档:https://ai.baidu.com/ai-doc/BODY/7k3cpyy1t

@@ -1,0 +1,11 @@
+
+/*
+!.gitignore
+!README.md
+!/config
+!/assets
+/config/*
+!/config/custom_components
+/config/custom_components/*
+!/config/custom_components/baidu_renti
+/config/custom_components/baidu_renti/__pycache__

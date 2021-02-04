@@ -1,0 +1,6 @@
+get_img:
+  description: 在检测到人的时候，是否保存图像，路径为media/camera_pic/{你的摄像头名称}目录下，推荐使用前端媒体游览器观看
+  fields:
+    img:
+      description: 设True为获取，False为不获取
+      example: True

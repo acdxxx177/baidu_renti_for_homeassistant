@@ -1,0 +1,8 @@
+{
+  "domain": "baidu_renti",
+  "name": "baidu_renti_for_homeassistant",
+  "documentation": "https://github.com/acdxxx177/baidu_renti_for_homeassistant.git",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": []
+}
